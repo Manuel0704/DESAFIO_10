@@ -1,0 +1,18 @@
+extends ./layout
+block section
+    div(class='mx-auto')
+        h1(class='text-center font-weight-bold text-info') Formulario - PUG
+    div(class='container')
+        form(action="/products", method="post") 
+            div(class='form-group')
+                label(class='text-info') Title
+                input(required class='form-control' name="title" type="text" placeholder="Nombre")
+            div(class='form-group')
+                label(class='text-info') Price
+                input(required class='form-control' name="price" type="number" min="0" placeholder="Precio")
+            div(class='form-group')
+                label(class='text-info') Image(link)
+                input(required class='form-control' name="thumbnail" type="text" placeholder="Imagen(link)")
+            div(class='form-group')
+                button(class='btn btn-info' type="submit") Crear producto
+        a(href='/products') Ir a productos

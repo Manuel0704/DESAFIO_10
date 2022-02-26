@@ -1,0 +1,42 @@
+<div class="mx-auto">
+  <h1 class="text-center font-weigth-bold text-info">Formulario - HBS</h1>
+</div>
+<div class="container">
+  <form action="/products" method="post">
+    <div>
+      <label class="text-info">Title</label>
+      <input
+        class="form-control"
+        required
+        name="title"
+        type="text"
+        placeholder="Nombre"
+      />
+    </div>
+    <div>
+      <label class="text-info">Price</label>
+      <input
+        class="form-control"
+        required
+        name="price"
+        type="number"
+        min="0"
+        placeholder="Precio"
+      />
+    </div>
+    <div>
+      <label class="text-info">Thumbnail</label>
+      <input
+        class="form-control"
+        required
+        name="thumbnail"
+        type="text"
+        placeholder="Imagen(link)"
+      />
+    </div>
+    <div>
+      <button class="mt-2 btn btn-info" type="submit">Crear Producto</button>
+    </div>
+  </form>
+  <a href="/products">Ir a productos</a>
+</div>

@@ -1,0 +1,3 @@
+#SACA LA CARPETA NODE_MODULES DE CADA CARPETA
+node_modules
+.package-lock.json

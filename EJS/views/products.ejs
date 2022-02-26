@@ -1,0 +1,34 @@
+<%- include("./partials/index.ejs") %>
+<div class="mx-auto">
+  <h1 class="text-center font-weigth-bold text-info">Productos - EJS</h1>
+</div>
+<div class="container">
+    <% if(productos.length > 0 ) { %>
+        <table class="table table-dark">
+            <caption>List of products</caption>
+            <thead>
+                <tr>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Precio</th>
+                    <th class="text-center">Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productos.forEach(item => { %>
+                    <tr>
+                        <td class="text-center align-middle"><%= item.title %></td>
+                        <td class="text-center align-middle"><%= item.price %></td>
+                        <td>
+                            <img class="mx-auto d-block" style="height: 100px;" alt="imagen de producto" src=<%= item.thumbnail %>>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <div class="bg-danger px-2 py-3">
+            <p class="m-0 font-weight-bold text-light h2">No hay productos</p>
+        </div>
+    <% } %> 
+    <a href="/">Ir a formulario</a>
+</div>
